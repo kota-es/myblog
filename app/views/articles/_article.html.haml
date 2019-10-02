@@ -1,0 +1,14 @@
+.article-box
+  .article-box__post-time
+    = article.created_at.strftime("%Y/%m/%d %H:%M")
+  .article-box__main-content
+    = simple_format(article.content)
+  .article-box__menu
+    - if user_signed_in? && current_user.id == article.user_id
+      %ul
+        %li 
+          = link_to "削除", "/articles/#{article.id}", method: :delete
+        %li 
+          = link_to "編集", "/articles/#{article.id}/edit"
+    - else
+      = "#{article.user.nickname}さんの記事です"

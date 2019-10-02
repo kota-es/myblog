@@ -1,0 +1,28 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Myblog
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    .header
+      .header__title
+        =link_to "myblog", root_path
+      .header__menu
+        - if user_signed_in?
+          %ul
+            %li 
+              ="こんにちは、#{current_user.nickname}さん！"
+            %li
+              =link_to "投稿", new_article_path
+            %li 
+              =link_to "ログアウト", destroy_user_session_path, method: :delete        
+        - else
+          %ul
+            %li 
+              =link_to "ログイン", new_user_session_path
+            %li 
+              =link_to "新規登録", new_user_registration_path    
+    = yield

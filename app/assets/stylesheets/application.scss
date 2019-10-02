@@ -1,0 +1,28 @@
+@import "./reset";
+@import "config/colors";
+@import "config/size";
+@import "modules/header";
+@import "modules/articles";
+@import "modules/text-box";
+@import "modules/sign-box";
+
+
+*{
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.main-view{
+  width: 70vw;
+  height: 100vh;
+  padding-top: 40px;
+  margin: 0 auto;
+  border-right: 1px solid skyblue;
+  border-left: 1px solid skyblue;
+  overflow: scroll;
+}

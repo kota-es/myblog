@@ -1,0 +1,5 @@
+.text-form
+  = form_for @article do |f| 
+    .a
+      = f.text_area :content, placeholder: "ここに書くんやで！", class: "text-box", size: "60 x 10"
+      =f.submit class: "submit-btn", value: "投稿する"

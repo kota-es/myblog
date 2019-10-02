@@ -1,0 +1,26 @@
+.header{
+  width: 100vw;
+  height: $header-height;
+  
+  background-color: $header-color;
+  display: flex;
+  justify-content: space-between;
+  &__title{
+    display: inline-block;
+    line-height: $header-height;
+    margin: auto;
+    font-size: 40px;
+    color: $title-color;
+  }
+  &__menu{
+    margin: 5px 25% 5px 0;
+    li{
+      color: #ffffff;
+      display: inline-block;
+      padding: 5px 10px;
+      margin: 10px 2px;
+      border: 1px solid #ffffff;
+      border-radius: 5px;
+    }
+  }
+}

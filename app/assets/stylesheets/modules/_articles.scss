@@ -1,0 +1,35 @@
+// Place all the styles related to the articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.article-box{
+  width: 50%;
+  margin: 0 auto 40px;
+  padding: 10px;
+  background-color: #ffffff;
+  border-top: 1px solid gray; 
+  border-right: 1px solid gray; 
+  border-left: 1px solid gray; 
+  border-bottom: 3px solid gray; 
+  border-radius: 10px;
+  table-layout: fixed;
+  &__post-time{
+    height: 50px;
+    font-size: 12px;
+    color: gray;
+  }
+  &__main-content{
+    padding-bottom: 30px;
+    overflow-wrap : break-word;
+  }
+  &__menu{
+    min-height: 30px;
+    color: gray;
+    padding-top: 5px;
+    border-top: 1px solid #ddd;
+    li{
+      margin-right: 5px;
+      float: left;
+    }
+  }
+}

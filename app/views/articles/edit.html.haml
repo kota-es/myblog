@@ -1,0 +1,6 @@
+.text-form
+  ここで編集するんやで！
+  = form_for @article do |f|
+    .a
+      = f.text_area :content, class: "text-box", size: "60 x 10"
+      = f.submit class: "submit-btn", value: "編集して投稿する"
