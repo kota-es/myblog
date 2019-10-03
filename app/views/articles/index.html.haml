@@ -1,4 +1,9 @@
 .main-view
 
   = render @articles
-  = paginate(@articles)
+
+.article-form
+  = form_for @article, html: {class: 'create-message'} do |f|
+    .input-box
+      = f.text_field :content, class:'input-box__text', placeholder: 'type a message'
+    = f.submit 'Send', class: 'submit-btn'

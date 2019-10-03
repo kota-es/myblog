@@ -2,7 +2,8 @@ class ArticlesController < ApplicationController
   before_action :authenticate_user!, except: :index
 
   def index
-    @articles = Article.order("created_at DESC").page(params[:page]).per(5)
+    @article = Article.new
+    @articles = Article.includes(:user)
   end
   
   def new
@@ -10,8 +11,7 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    current_user.articles.create(article_params)
-    redirect_to root_path
+    @article = current_user.articles.create(article_params)
   end
 
   def destroy
